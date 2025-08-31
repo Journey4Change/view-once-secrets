@@ -88,19 +88,6 @@ const PasswordEntry = ({ onAccessGranted }: PasswordEntryProps) => {
                 )}
               </Button>
             </form>
-
-            {/* Demo Passwords Hint */}
-            <div className="mt-6 p-3 bg-security-subtle rounded-lg border border-border/30">
-              <div className="flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-security-warning mt-0.5 flex-shrink-0" />
-                <div className="text-xs space-y-1">
-                  <p className="font-medium text-security-warning">Demo Mode</p>
-                  <p className="text-muted-foreground">
-                    Try: SECRET2024, VIEWONCE123, or CONFIDENTIAL
-                  </p>
-                </div>
-              </div>
-            </div>
           </CardContent>
         </Card>
 
