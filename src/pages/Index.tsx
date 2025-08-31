@@ -1,14 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react'
+import PasswordEntry from '@/components/PasswordEntry'
+import ArticleViewer from '@/components/ArticleViewer'
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
+  const [hasAccess, setHasAccess] = useState(false)
+
+  const handleAccessGranted = () => {
+    setHasAccess(true)
+  }
+
+  const handleExit = () => {
+    setHasAccess(false)
+  }
+
+  if (hasAccess) {
+    return <ArticleViewer onExit={handleExit} />
+  }
+
+  return <PasswordEntry onAccessGranted={handleAccessGranted} />
 };
 
 export default Index;

@@ -61,7 +61,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				security: {
+					DEFAULT: 'hsl(var(--security-accent))',
+					subtle: 'hsl(var(--security-subtle))',
+					warning: 'hsl(var(--restricted-warning))',
+					success: 'hsl(var(--success-glow))'
 				}
+			},
+			backgroundImage: {
+				'security-gradient': 'var(--security-gradient)',
+			},
+			boxShadow: {
+				'security-glow': 'var(--security-glow)',
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
